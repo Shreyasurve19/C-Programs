@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <unistd.h>
+
+void delay(int seconds) {
+  sleep(seconds);
+}
+
+void trafficLight() {
+    while (1) {
+     // RED LIGHT
+     printf("RED🔴 - STOP!\n");
+     delay(5);
+    
+     // YELLOW LIGHT
+     printf("YELLOW🟡 - GET READY.\n");
+     delay(3);
+    
+     // GREEN LIGHT
+     printf("GREEN🟢 - GO!!\n");
+     delay(5);
+ }
+}
+
+ int main() {
+   printf("Traffic Light Simulation.\n ");
+   trafficLight();
+   return 0;
+}
