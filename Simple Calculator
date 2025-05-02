@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+  char sign;
+  double myNum1, myNum2, result;
+  
+  printf("SIMPLE CALCULATOR.\n");
+  printf("Enter a sign (+, -, *, /): ");
+  scanf("%c", &sign);
+  
+  printf("Enter any two numbers: ");
+  scanf("%lf %lf", &myNum1, &myNum2);
+  
+  switch (sign) {
+    case '+':
+     result = myNum1 + myNum2;
+     printf("Result: %.0lf\n", result);
+     break;
+    case '-':
+     result = myNum1 - myNum2;
+     printf("Result: %.0lf\n", result);
+     break;
+    case '*':
+     result = myNum1 * myNum2;
+     printf("Result: %.0lf\n", result);
+     break;
+    case '/':
+      if (myNum2 != 0) {
+         result = myNum1 / myNum2;
+         printf("Result: %.0lf\n", result);
+      } else {
+          printf("Error: Can't divide by zero.\n");
+      }
+       break;
+     default:
+       printf("Invalid Sign!");
+}
+   return 0;
+}
